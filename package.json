@@ -7,7 +7,8 @@
   "scripts": {
     "test": "jest",
     "typecheck": "tsc --noEmit",
-    "build": "tsc"
+    "build": "tsc",
+    "release": "npm run build && np"
   },
   "homepage": "https://github.com/zacharytamas/tailmatter",
   "bugs": "https://github.com/zacharytamas/tailmatter/issues",
@@ -39,8 +40,12 @@
     "husky": "^4.2.3",
     "jest": "^25.1.0",
     "lint-staged": "^10.0.8",
+    "np": "^6.2.0",
     "prettier": "^1.19.1",
     "typescript": "^3.8.3"
+  },
+  "np": {
+    "yarn": false
   },
   "dependencies": {
     "js-yaml": "^3.13.1"
