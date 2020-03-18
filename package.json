@@ -1,6 +1,6 @@
 {
   "name": "tailmatter",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Decodes and encodes Yaml-formatted metadata into the end of Markdown documents.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
