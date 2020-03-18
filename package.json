@@ -1,0 +1,56 @@
+{
+  "name": "tailmatter",
+  "version": "0.0.0",
+  "description": "Decodes and encodes Yaml-formatted metadata into the end of Markdown documents.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc"
+  },
+  "homepage": "https://github.com/zacharytamas/tailmatter",
+  "bugs": "https://github.com/zacharytamas/tailmatter/issues",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zacharytamas/tailmatter.git"
+  },
+  "keywords": [
+    "yaml",
+    "markdown"
+  ],
+  "author": {
+    "email": "zachary@jones.cx",
+    "name": "Zachary Jones",
+    "url": "https://zacharytamas.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/common-tags": "^1.8.0",
+    "@types/jest": "^25.1.4",
+    "@types/js-yaml": "^3.12.2",
+    "@types/node": "^13.9.1",
+    "babel-jest": "^25.1.0",
+    "common-tags": "^1.8.0",
+    "eslint": "^6.8.0",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "lint-staged": "^10.0.8",
+    "prettier": "^1.19.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "js-yaml": "^3.13.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "prettier --write"
+  }
+}

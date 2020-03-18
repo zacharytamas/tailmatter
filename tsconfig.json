@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "strict": true,
+    "experimentalDecorators": true,
+    "lib": ["esnext"],
+    "outDir": "dist"
+  },
+  "include": ["src"],
+  "exclude": ["src/__tests__"]
+}
