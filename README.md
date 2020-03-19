@@ -1,4 +1,4 @@
-# `tailmatter`
+# tailmatter
 
 [![GitHub][github-badge]][github]
 [![Stars][]][github]
@@ -21,7 +21,9 @@ Markdown documents but I want to keep the content of the document front and cent
 
 This package is published on `npm` and can easily be added like so:
 
-    npm i tailmatter
+```bash
+npm i tailmatter
+```
 
 ## Usage
 
@@ -43,8 +45,41 @@ const myMarkdown = stripIndent`
 const result = load(myMarkdown);
 
 // result is:
-// {
-//  body: '# My markdown\n\nTesting paragraph',
-//  meta: { test: true }
-// }
+
+{
+ body: '# My markdown\n\nTesting paragraph',
+ meta: { test: true }
+}
+```
+
+### Types
+
+This library is authored in [TypeScript](https://www.typescriptlang.org/) and is published
+with first-party types.
+
+The type returned by the `load` method is generic so that you can specify the type of the
+metadata you expect. **If you do not provide a type it will be assumed as `any`.**
+
+For example:
+
+```typescript
+import { load } from 'tailmatter';
+import { stripIndent } from 'common-tags'; // optional, for demonstration
+
+interface Metadata {
+  test: boolean;
+}
+
+const myMarkdown = stripIndent`
+  # My markdown
+
+  Testing paragraph
+  ---
+  test: true
+  ---
+`;
+
+const result = load<Metadata>(myMarkdown);
+
+// TypeScript now knows that `result.meta.test` is a `boolean` value.
 ```
